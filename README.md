@@ -56,7 +56,7 @@ with open(file) as file_in:
         lines.append(line.strip('\n'))
     for url in lines:
     	output = urlparse(url).netloc
-    	cmd = os.system("ffuf -u {}/FUZZ -w {} -o {} -s -D -ac -H User-Agent: Mediapartners-Google".format(url,wordlist,output))
+    	cmd = os.system("ffuf -u {}/FUZZ -w {} -o {}".format(url,wordlist,output))
     	
 out = os.system('cat *  | jq -r '"'"'.results[] |   "\(.length)"+ " " +"\(.url)" + " " +  "\(.status)"  '"'"' >> result.txt')
 result = open("result.txt", "r")
