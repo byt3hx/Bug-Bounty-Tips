@@ -13,7 +13,7 @@ nmap -sS -T4 -A -p- -iL live_subdomains.txt --min-rate 1000 --max-retries 3
 Do you wanna run ffuf with mutliple urls?
 Here is what you are looking for.
 
-Note:I saw that command from twitter and it works really well but I forget the source link:")
+Note:I saw that rush command from twitter and it works really well but I forget the source link:")
 
 
 Before we run the ffuf with rush make a directory because you gonna output all the domain from your file.
